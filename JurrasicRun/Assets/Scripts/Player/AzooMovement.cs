@@ -27,7 +27,7 @@ public class AzooMovement : MonoBehaviour
 
     private Rigidbody2D body;
     private Animator anim;
-    private BoxCollider2D boxCollider;
+    private CapsuleCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
     private Vector3 startingScale; 
@@ -40,7 +40,7 @@ public class AzooMovement : MonoBehaviour
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<CapsuleCollider2D>();
         startingScale = transform.localScale;
     }
 
@@ -48,6 +48,7 @@ public class AzooMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
+        
         //Flip player when moving left-right
         if (horizontalInput > 0.01f)
             transform.localScale = startingScale;
@@ -93,13 +94,11 @@ public class AzooMovement : MonoBehaviour
 
         //SoundManager.instance.PlaySound(jumpSound);
 
-        if (onWall())
-            WallJump();
+        
+        
+        if (isGrounded())
+            body.velocity = new Vector2(body.velocity.x, jumpPower);
         else
-        {
-            if (isGrounded())
-                body.velocity = new Vector2(body.velocity.x, jumpPower);
-            else
             {
                 if (coyoteCounter > 0)
                     body.velocity = new Vector2(body.velocity.x, jumpPower);
@@ -115,13 +114,10 @@ public class AzooMovement : MonoBehaviour
 
             coyoteCounter = 0; //avoiding double jumps
 
-        }
+        
     }
 
-    private void WallJump()
-    {
-        body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
-    }
+
 
 
     private bool isGrounded()
@@ -131,8 +127,9 @@ public class AzooMovement : MonoBehaviour
     }
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
-        return raycastHit.collider != null;
+        //RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        //return raycastHit.collider != null;
+        return false;
     }
     public bool canAttack()
     {
