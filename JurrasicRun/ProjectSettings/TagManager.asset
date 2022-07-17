@@ -7,11 +7,13 @@ TagManager:
   - Ground
   - Enemy
   - Checkpoint
+  - Platform
+  - Box
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Platform
   - Water
   - UI
   - Ground
