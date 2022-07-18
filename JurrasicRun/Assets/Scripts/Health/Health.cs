@@ -86,7 +86,7 @@ public class Health : MonoBehaviour
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
-        anim.Play("Idle");
+        anim.Play("Respawn");
         StartCoroutine(Invunerability());
 
         foreach (Behaviour component in components)

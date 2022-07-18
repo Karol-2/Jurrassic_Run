@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class AzooMovement : MonoBehaviour
@@ -5,6 +8,14 @@ public class AzooMovement : MonoBehaviour
     [Header("Movement Parameters")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
+
+    [Header("Dashing")]
+    [SerializeField] public float dashingPower = 24f;
+    [SerializeField] public float dashingTime = 0.2f;
+    [SerializeField] public float dashingCooldown = 1f;
+    [SerializeField] private TrailRenderer tr;
+    private bool canDash = true;
+    private bool isDashing;
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime; //ile czasu moze wisiec w powietrzu znim skoczy
@@ -14,23 +25,19 @@ public class AzooMovement : MonoBehaviour
     [SerializeField] private int extraJumps;
     private int jumpCounter;
 
-    [Header("Wall jumping")]
-    [SerializeField] private float wallJumpX; // horizontal wall jump force
-    [SerializeField] private float wallJumpY; //vertical wall jump force
-
-
-
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
+    [Header("Dust particles")]
+    [SerializeField]private ParticleSystem dust;
 
     private Rigidbody2D body;
     private Animator anim;
-    private CapsuleCollider2D boxCollider;
+    private CapsuleCollider2D collider;
     private float wallJumpCooldown;
     private float horizontalInput;
-    private Vector3 startingScale; 
+    private Vector3 startingScale;
 
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
@@ -40,14 +47,22 @@ public class AzooMovement : MonoBehaviour
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<CapsuleCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
         startingScale = transform.localScale;
+       
     }
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        if (isDashing)
+            return;
 
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+        horizontalInput = Input.GetAxis("Horizontal");
+       // Debug.Log(isGrounded());
         
         //Flip player when moving left-right
         if (horizontalInput > 0.01f)
@@ -59,22 +74,28 @@ public class AzooMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", isGrounded());
 
+        //dash
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash());
+        }
+
+
+
+
         //jump
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             Jump();
+            CreateDust();
+        }
+            
 
         //adjustable jump height
         if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
             body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
 
-        if (onWall())
-        {
-            body.gravityScale = 0; // teraz postac nie zjezdza ze sciany
-            body.velocity = Vector2.zero;
-        }
-        else
-        {
-            body.gravityScale = 7;
+            //body.gravityScale = 7;
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
             if (isGrounded())
@@ -84,13 +105,13 @@ public class AzooMovement : MonoBehaviour
             }
             else
                 coyoteCounter -= Time.deltaTime;
-        }
+        
 
     }
 
     private void Jump()
     {
-        if (coyoteCounter < 0 && !onWall() && jumpCounter <= 0) return;
+        if (coyoteCounter < 0  && jumpCounter <= 0) return;
 
         //SoundManager.instance.PlaySound(jumpSound);
 
@@ -117,13 +138,39 @@ public class AzooMovement : MonoBehaviour
         
     }
 
-
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = body.gravityScale;
+        body.gravityScale = 0f;
+        body.velocity = new Vector2(transform.localScale.x * dashingPower , 0.1f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        body.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
 
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        float extraHeightText = 0.2f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down,
+            collider.bounds.extents.y + extraHeightText,  groundLayer);
+        Color rayColor;
+        if (raycastHit.collider != null)
+            rayColor = Color.green;
+        else
+            rayColor = Color.red;
+
+        Debug.DrawRay(collider.bounds.center, Vector2.down * (collider.bounds.extents.y + extraHeightText), rayColor);
+        
+        
         return raycastHit.collider != null;
+        
     }
     private bool onWall()
     {
@@ -133,6 +180,10 @@ public class AzooMovement : MonoBehaviour
     }
     public bool canAttack()
     {
-        return horizontalInput == 0 && isGrounded() && !onWall();
+        return horizontalInput == 0 && isGrounded() ;
+    }
+    private void CreateDust()
+    {
+        dust.Play();
     }
 }
