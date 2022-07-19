@@ -38,14 +38,12 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
-           // SoundManager.instance.PlaySound(hurtSound);
+            //SoundManager.instance.PlaySound(hurtSound);
         }
         else
         {
             if (!dead)
             {
-
-
                 //Deactivate all attached component classes
                 foreach (Behaviour component in components)
                     component.enabled = false;
@@ -81,17 +79,17 @@ public class Health : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    //Respawn
     public void Respawn()
     {
-        dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
-        anim.Play("Respawn");
+        anim.Play("Idle");
         StartCoroutine(Invunerability());
+        dead = false;
 
+        //Activate all attached component classes
         foreach (Behaviour component in components)
             component.enabled = true;
-
-
     }
 }
