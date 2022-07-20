@@ -75,10 +75,10 @@ public class AzooMovement : MonoBehaviour
         anim.SetBool("grounded", isGrounded());
 
         //dash
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            StartCoroutine(Dash());
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    StartCoroutine(Dash());
+        //}
 
 
 
@@ -122,7 +122,11 @@ public class AzooMovement : MonoBehaviour
         else
             {
                 if (coyoteCounter > 0)
-                    body.velocity = new Vector2(body.velocity.x, jumpPower);
+            {
+                CreateDust();
+                body.velocity = new Vector2(body.velocity.x, jumpPower);
+            }
+                 
                 else
                 {
                     if (jumpCounter > 0)

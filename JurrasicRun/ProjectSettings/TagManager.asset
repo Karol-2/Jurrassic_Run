@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - Platform
   - Box
+  - Ladder
   layers:
   - Default
   - TransparentFX
