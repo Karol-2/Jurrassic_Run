@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - Box
   - Ladder
+  - OneWayPlatform
   layers:
   - Default
   - TransparentFX
