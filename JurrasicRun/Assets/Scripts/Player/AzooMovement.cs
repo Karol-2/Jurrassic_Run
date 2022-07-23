@@ -75,10 +75,10 @@ public class AzooMovement : MonoBehaviour
         anim.SetBool("grounded", isGrounded());
 
         //dash
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    StartCoroutine(Dash());
-        //}
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash());
+        }
 
 
 
@@ -89,13 +89,11 @@ public class AzooMovement : MonoBehaviour
             Jump();
             CreateDust();
         }
-            
-
         //adjustable jump height
-        if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
+        else if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
             body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
 
-            //body.gravityScale = 7;
+            
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
             if (isGrounded())
@@ -111,14 +109,19 @@ public class AzooMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter < 0  && jumpCounter <= 0) return;
+        if (coyoteCounter < 0  && jumpCounter < 0) return;
 
         //SoundManager.instance.PlaySound(jumpSound);
 
         
         
         if (isGrounded())
+        {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
+
+           // new WaitForSeconds(0.5f);
+        }
+           
         else
             {
                 if (coyoteCounter > 0)
@@ -127,14 +130,14 @@ public class AzooMovement : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, jumpPower);
             }
                  
-                else
-                {
-                    if (jumpCounter > 0)
-                    {
-                        body.velocity = new Vector2(body.velocity.x, jumpPower);
-                        jumpCounter--;
-                    }
-                }
+                //else
+                //{
+                //    if (jumpCounter > 0)
+                //    {
+                //        body.velocity = new Vector2(body.velocity.x, jumpPower);
+                //        jumpCounter--;
+                //    }
+                //}
             }
 
             coyoteCounter = 0; //avoiding double jumps
@@ -161,7 +164,7 @@ public class AzooMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        float extraHeightText = 0.2f;
+        float extraHeightText = 0.1f;
         RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down,
             collider.bounds.extents.y + extraHeightText,  groundLayer);
         Color rayColor;
