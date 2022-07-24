@@ -10,12 +10,13 @@ public class AzooMovement : MonoBehaviour
     [SerializeField] private float jumpPower;
 
     [Header("Dashing")]
-    [SerializeField] public float dashingPower = 24f;
-    [SerializeField] public float dashingTime = 0.2f;
-    [SerializeField] public float dashingCooldown = 1f;
-    [SerializeField] private TrailRenderer tr;
     private bool canDash = true;
     private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+    [SerializeField] private TrailRenderer tr;
+    
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime; //ile czasu moze wisiec w powietrzu znim skoczy
@@ -32,7 +33,7 @@ public class AzooMovement : MonoBehaviour
     [Header("Dust particles")]
     [SerializeField]private ParticleSystem dust;
 
-    private Rigidbody2D body;
+    private Rigidbody2D rb;
     private Animator anim;
     private CapsuleCollider2D collider;
     private float wallJumpCooldown;
@@ -45,7 +46,7 @@ public class AzooMovement : MonoBehaviour
     private void Awake()
     {
         //Grab references for rigidbody and animator from object
-        body = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         collider = GetComponent<CapsuleCollider2D>();
         startingScale = transform.localScale;
@@ -55,7 +56,9 @@ public class AzooMovement : MonoBehaviour
     private void Update()
     {
         if (isDashing)
+        {
             return;
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -90,11 +93,11 @@ public class AzooMovement : MonoBehaviour
             CreateDust();
         }
         //adjustable jump height
-        else if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
+        else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);
 
             
-            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
             if (isGrounded())
             {
@@ -107,6 +110,15 @@ public class AzooMovement : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+        rb.velocity = new Vector2((Input.GetAxisRaw("Horizontal")) * speed, rb.velocity.y);
+    }
+
     private void Jump()
     {
         if (coyoteCounter < 0  && jumpCounter < 0) return;
@@ -117,7 +129,7 @@ public class AzooMovement : MonoBehaviour
         
         if (isGrounded())
         {
-            body.velocity = new Vector2(body.velocity.x, jumpPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
 
            // new WaitForSeconds(0.5f);
         }
@@ -127,7 +139,7 @@ public class AzooMovement : MonoBehaviour
                 if (coyoteCounter > 0)
             {
                 CreateDust();
-                body.velocity = new Vector2(body.velocity.x, jumpPower);
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             }
                  
                 //else
@@ -149,13 +161,13 @@ public class AzooMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        float originalGravity = body.gravityScale;
-        body.gravityScale = 0f;
-        body.velocity = new Vector2(transform.localScale.x * dashingPower , 0.1f);
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
-        body.gravityScale = originalGravity;
+        rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;

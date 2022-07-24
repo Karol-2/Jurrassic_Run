@@ -236,7 +236,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 782429280803649977}
   - {fileID: 782429281312166565}
-  speed: 2
+  speed: 3
   idleDuration: 0
 --- !u!114 &782429280845288013
 MonoBehaviour:

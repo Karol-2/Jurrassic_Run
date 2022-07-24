@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
+    private Rigidbody2D rb;
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -25,6 +26,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
@@ -52,6 +54,7 @@ public class Health : MonoBehaviour
                 anim.SetTrigger("die");
 
                 dead = true;
+                rb.bodyType = RigidbodyType2D.Static;
                 //SoundManager.instance.PlaySound(deathSound);
             }
         }
@@ -85,9 +88,10 @@ public class Health : MonoBehaviour
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         anim.Play("Idle");
+        
         StartCoroutine(Invunerability());
         dead = false;
-
+        rb.bodyType = RigidbodyType2D.Dynamic;
         //Activate all attached component classes
         foreach (Behaviour component in components)
             component.enabled = true;
