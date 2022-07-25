@@ -13,11 +13,12 @@ public class Player_Movement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool isJumping;
-    private bool doubleJump;
+ 
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
+
 
     [Header("Dashing")]
     [SerializeField] private float dashingPower = 24f;
@@ -26,23 +27,30 @@ public class Player_Movement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
 
+
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask wallLayer;
+    //[SerializeField] private Transform groundCheck;
+    //[SerializeField] private LayerMask wallLayer;
+
 
     [Header("Dust particles")]
     [SerializeField] private ParticleSystem dust;
 
+
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip dashSound;
+
 
     private Rigidbody2D rb;
     private Animator anim;
     private TrailRenderer tr;
+    private Collider2D collider;
 
     private void Awake()
     {
+        collider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         tr = GetComponent<TrailRenderer>();
@@ -83,7 +91,7 @@ public class Player_Movement : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            //SoundManager.instance.PlaySound(jumpSound);
+            SoundManager.instance.PlaySound(jumpSound);
             CreateDust();
             jumpBufferCounter = 0f;
 
@@ -93,7 +101,6 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            //SoundManager.instance.PlaySound(jumpSound);
             CreateDust();
             coyoteTimeCounter = 0f;
         }
@@ -116,28 +123,28 @@ public class Player_Movement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    private bool isGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
     //private bool isGrounded()
     //{
-    //    float extraHeightText = 0.1f;
-    //    RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down,
-    //        collider.bounds.extents.y + extraHeightText, groundLayer);
-    //    Color rayColor;
-    //    if (raycastHit.collider != null)
-    //        rayColor = Color.green;
-    //    else
-    //        rayColor = Color.red;
-
-    //    Debug.DrawRay(collider.bounds.center, Vector2.down * (collider.bounds.extents.y + extraHeightText), rayColor);
-
-
-    //    return raycastHit.collider != null;
-
+    //    return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     //}
+
+    private bool isGrounded()
+    {
+        float extraHeightText = 0.25f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(collider.bounds.center, Vector2.down,
+            collider.bounds.extents.y + extraHeightText, groundLayer);
+        Color rayColor;
+        if (raycastHit.collider != null)
+            rayColor = Color.green;
+        else
+            rayColor = Color.red;
+
+        Debug.DrawRay(collider.bounds.center, Vector2.down * (collider.bounds.extents.y + extraHeightText), rayColor);
+
+
+        return raycastHit.collider != null;
+
+    }
 
     private void Flip()
     {
@@ -166,6 +173,7 @@ public class Player_Movement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        SoundManager.instance.PlaySound(jumpSound);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);

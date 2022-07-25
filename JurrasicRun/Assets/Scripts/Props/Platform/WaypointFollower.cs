@@ -23,14 +23,19 @@ public class WaypointFollower : MonoBehaviour
     private void Update()
     {
         //Debug.Log(currentIndexOfWaypoint);
-        if (Vector2.Distance(waypoints[currentIndexOfWaypoint].transform.position,
-            transform.position)< 0.1f)
+        if(waypoints.Length != 0)
         {
-            currentIndexOfWaypoint++;
-            if(currentIndexOfWaypoint >= waypoints.Length)
-                currentIndexOfWaypoint = 0;
+            if (Vector2.Distance(waypoints[currentIndexOfWaypoint].transform.position,
+                    transform.position) < 0.1f)
+            {
+                currentIndexOfWaypoint++;
+                if (currentIndexOfWaypoint >= waypoints.Length)
+                    currentIndexOfWaypoint = 0;
+            }
+
+            transform.position = Vector2.MoveTowards(transform.position,
+                waypoints[currentIndexOfWaypoint].transform.position, Time.deltaTime * speed);
         }
-        transform.position = Vector2.MoveTowards(transform.position,
-            waypoints[currentIndexOfWaypoint].transform.position, Time.deltaTime * speed);
+
     }
 }

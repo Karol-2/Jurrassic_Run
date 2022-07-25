@@ -12,20 +12,24 @@ public class Player_Attack : MonoBehaviour
     [SerializeField] private ParticleSystem fire;
 
     private Animator anim;
-    private AzooMovement playerMovement;
+    private Player_Movement playerMovement;
     private GrabController grabController;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
+
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<AzooMovement>();
+        playerMovement = GetComponent<Player_Movement>();
         grabController = GetComponent<GrabController>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack() && grabController.isHolding == false)
+        if (Input.GetMouseButton(0) 
+            && cooldownTimer > attackCooldown 
+            && playerMovement.canAttack() 
+            && grabController.isHolding == false)
             Attack();
 
         cooldownTimer += Time.deltaTime;

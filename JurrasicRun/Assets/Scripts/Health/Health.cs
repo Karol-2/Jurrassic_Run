@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
-            //SoundManager.instance.PlaySound(hurtSound);
+            SoundManager.instance.PlaySound(hurtSound);
         }
         else
         {
@@ -55,7 +55,7 @@ public class Health : MonoBehaviour
 
                 dead = true;
                 rb.bodyType = RigidbodyType2D.Static;
-                //SoundManager.instance.PlaySound(deathSound);
+                SoundManager.instance.PlaySound(deathSound);
             }
         }
     }

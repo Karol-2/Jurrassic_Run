@@ -8,6 +8,7 @@ public class GrabController : MonoBehaviour
    [SerializeField] private Transform boxHolder;
    [SerializeField] private float rayDistance;
     public bool isHolding = false;
+    public bool hasKey = false;
 
 
     void Update()
