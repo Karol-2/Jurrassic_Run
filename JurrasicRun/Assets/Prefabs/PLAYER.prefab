@@ -5222,8 +5222,8 @@ MonoBehaviour:
   - {fileID: 457969151968652610}
   - {fileID: 457969151968652632}
   - {fileID: 457969151968652609}
-  deathSound: {fileID: 0}
-  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
+  hurtSound: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
 --- !u!114 &457969151968652612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5317,6 +5317,7 @@ MonoBehaviour:
     m_Bits: 64
   dust: {fileID: 457969152022714287}
   jumpSound: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  dashSound: {fileID: 0}
 --- !u!114 &457969151968652608
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -147,6 +147,14 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 2686409595307925166}
+    - target: {fileID: 6354399042710799512, guid: 1fd5810f1c50ed143b3d6222ef753b93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354399042710799512, guid: 1fd5810f1c50ed143b3d6222ef753b93, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6354399042710799513, guid: 1fd5810f1c50ed143b3d6222ef753b93, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -221,3 +229,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  waterSound: {fileID: 0}
