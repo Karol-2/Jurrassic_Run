@@ -30,6 +30,7 @@ public class Player_Movement : MonoBehaviour
 
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
+    public Pause_Menu pause;
     //[SerializeField] private Transform groundCheck;
     //[SerializeField] private LayerMask wallLayer;
 
@@ -60,7 +61,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
-
+        
         if (isDashing)
             return;
 
@@ -159,7 +160,7 @@ public class Player_Movement : MonoBehaviour
 
     public bool canAttack()
     {
-        return horizontal == 0 && isGrounded();
+        return horizontal == 0 && isGrounded()&& !pause.GamePaused;
     }
 
     private IEnumerator JumpCooldown()
@@ -173,7 +174,7 @@ public class Player_Movement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        SoundManager.instance.PlaySound(jumpSound);
+        SoundManager.instance.PlaySound(dashSound);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);

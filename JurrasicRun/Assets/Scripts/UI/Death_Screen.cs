@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class Death_Screen : MonoBehaviour
 {
     [SerializeField] private GameObject gameoverScreen;
     [SerializeField] private AudioClip gameoverSound;
@@ -14,17 +15,17 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameoverScreen.SetActive(true);
-        //SoundManager.instance.PlaySound(gameoverSound);
+        SoundManager.instance.PlaySound(gameoverSound);
 
     }
 
     public void Restart()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainMenu()
     {
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
     public void Quit()
     {

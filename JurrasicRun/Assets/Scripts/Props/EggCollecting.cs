@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthCollectible : MonoBehaviour
+public class EggCollecting : MonoBehaviour
 {
     [SerializeField] private AudioClip pickupSound;
-    [SerializeField] private float healthValue;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             SoundManager.instance.PlaySound(pickupSound);
-            collision.GetComponent<Health>().AddHealth(healthValue);
+            collision.GetComponent<Eggs>().Collected();
             gameObject.SetActive(false);
         }
     }

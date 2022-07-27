@@ -11,6 +11,7 @@ TagManager:
   - Box
   - Ladder
   - OneWayPlatform
+  - Egg
   layers:
   - Default
   - TransparentFX

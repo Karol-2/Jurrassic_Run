@@ -252,7 +252,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 728f29e95b2fe99488f34c42e38c63b0, type: 3}
   - {fileID: 8300000, guid: 8b8baae52d17e7c459ac409b1eb7cb69, type: 3}
   timeOfSilence: 5
+  birdSaved: 0
   linkedCage: {fileID: 559843877685037737}
+  audioSource: {fileID: 0}
 --- !u!61 &2135401693495722365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,9 +302,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 14.71
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -407,7 +409,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -437,7 +439,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.989
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

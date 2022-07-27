@@ -6,14 +6,17 @@ public class Bird_In_Cage : MonoBehaviour
 {
     [SerializeField] private AudioClip[] dodoSounds;
     [SerializeField] private int timeOfSilence;
-    private AudioSource currentSound;
+    
+    public bool birdSaved = false;
+    private AudioClip currentSound;
     public GameObject linkedCage;
     private Rigidbody2D rb;
-    private AudioSource audioSource;
-    // Start is called before the first frame update
+    public AudioSource audioSource;
+    
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -21,24 +24,27 @@ public class Bird_In_Cage : MonoBehaviour
     {
         if (linkedCage.GetComponent<SpriteRenderer>().enabled == false)
         {
-            //sounde of freedom
+            
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.gameObject.tag = "Box";
+            birdSaved = true;
         }
-        // play sounds of being in cage
+        if (!audioSource.isPlaying)
+            StartCoroutine(RandomSound());
     }
 
-    private void CallAudio()
+  
+    private IEnumerator RandomSound()
     {
-        Invoke("RandomSound", timeOfSilence);
-    }
-    private void RandomSound()
-    {
-        currentSound.clip = dodoSounds[Random.Range(0,
-            dodoSounds.Length)];
-        audioSource.clip = currentSound.clip;
+        if (audioSource.isPlaying)
+        {
+            yield break;
+        } 
+        currentSound = dodoSounds[Random.Range(0,dodoSounds.Length)];
+        audioSource.clip = currentSound;
         audioSource.Play();
-        CallAudio();
+        yield return new WaitForSeconds(timeOfSilence);
+        yield return 0;
     }
 
 

@@ -4874,8 +4874,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1434717461
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4958,7 +4958,7 @@ GameObject:
   - component: {fileID: 457969151968652615}
   - component: {fileID: 457969151968652610}
   - component: {fileID: 457969151968652609}
-  - component: {fileID: 457969151968652608}
+  - component: {fileID: 1603174472450928346}
   m_Layer: 8
   m_Name: PLAYER
   m_TagString: Player
@@ -5133,8 +5133,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1434717461
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Time: 0.5
   m_Parameters:
@@ -5215,7 +5215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  iFramesDuration: 1.5
+  iFramesDuration: 0.5
   numberOfFlashes: 3
   components:
   - {fileID: 457969151968652615}
@@ -5236,7 +5236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24074f8c70ac0a34485d6218e4f0628b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointSound: {fileID: 0}
+  checkpointSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  failureSound: {fileID: 8300000, guid: df729d213c4be44a9b55cd109f5cd4f9, type: 3}
+  amountOfLives: 3
+  deathScreen: {fileID: 0}
 --- !u!114 &457969151968652632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5278,7 +5281,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fireballSound: {fileID: 0}
+  fireballSound: {fileID: 8300000, guid: 4ed38f6b1e724c44a8bb48880046ba16, type: 3}
   fire: {fileID: 457969151703535409}
 --- !u!114 &457969151968652610
 MonoBehaviour:
@@ -5315,10 +5318,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  pause: {fileID: 0}
   dust: {fileID: 457969152022714287}
   jumpSound: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
-  dashSound: {fileID: 0}
---- !u!114 &457969151968652608
+  dashSound: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
+--- !u!114 &1603174472450928346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5327,9 +5331,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 457969151968652625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e548795ae598a146bdf7e95b5ff1606, type: 3}
+  m_Script: {fileID: 11500000, guid: 900e5ec769145bd48a9381d85e7da25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectedEggs: 0
+  AmountOfAllExisting: 0
 --- !u!1 &457969152022714274
 GameObject:
   m_ObjectHideFlags: 0
@@ -10109,8 +10115,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1434717461
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
