@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: Water_DOWN
+  m_Name: Water_Down
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
+  - {fileID: 563728718, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
   - {fileID: 83491801, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
   - {fileID: -1171443910, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
   - {fileID: -809683621, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
-  - {fileID: 1689785700, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
-  - {fileID: -622701694, guid: cda60f2936bdade44b3c139896ee2cdd, type: 3}
-  m_MinSpeed: 5
-  m_MaxSpeed: 5
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 1
