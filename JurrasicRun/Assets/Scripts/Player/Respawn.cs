@@ -10,10 +10,12 @@ public class Respawn : MonoBehaviour
     public int amountOfLives = 2;
     private Transform currenCheckpoint;
     private Health playerHealth;
+    private Animator playerAnim;
     [SerializeField] private Death_Screen deathScreen;
 
     private void Awake()
     {
+        playerAnim = GetComponent<Animator>();
         playerHealth = GetComponent<Health>();
         deathScreen = FindObjectOfType<Death_Screen>();
     }
@@ -24,6 +26,7 @@ public class Respawn : MonoBehaviour
         if (currenCheckpoint == null || amountOfLives <1)
         {
             SoundManager.instance.PlaySound(failureSound);
+            playerAnim.enabled = false;
             deathScreen.GameOver();
 
             return;
