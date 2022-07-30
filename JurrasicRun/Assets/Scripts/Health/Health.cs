@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
+            Shaking();
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
             SoundManager.instance.PlaySound(hurtSound);
@@ -76,6 +77,10 @@ public class Health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(8, 9, false);
         invulnerable = false;
+    }
+    public void Shaking()
+    {
+        CameraShake.Instance.Shake(5f, 5f);
     }
     private void Deactivate()
     {
