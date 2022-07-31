@@ -13,13 +13,21 @@ public class Finished_Panel : MonoBehaviour
     private float transitionTime = 1f;
     public TMPro.TMP_Text score;
     public TMPro.TMP_Text dodo;
+    public int allEggs;
+    public int collectedEggs;
+    public bool dodoSaved;
 
 
     public void Display()
     {
+        allEggs = eggs.AmountOfAllExisting;
+        collectedEggs = eggs.collectedEggs;
+        dodoSaved = cage.birdSaved;
+
+
         UI.SetActive(true);
-        score.text = (eggs.collectedEggs.ToString() + " / " + eggs.AmountOfAllExisting.ToString());
-        if (cage.birdSaved)
+        score.text = collectedEggs.ToString() + " / " + allEggs.ToString();
+        if (dodoSaved)
             dodo.text = "Found";
         else
             dodo.text = "Not Found";
