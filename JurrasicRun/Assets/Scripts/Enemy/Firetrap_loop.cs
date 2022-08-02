@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Firetrap_loop : MonoBehaviour
 {
-    [SerializeField] private float damage;
 
     [Header("Firetrap Timers")]
     [SerializeField] private float activationDelay;
     [SerializeField] private float activeTime;
     [SerializeField] private float waitTime;
+    [SerializeField] private float damage;
     [SerializeField] private GameObject light;
     private Animator anim;
     private SpriteRenderer spriteRend;
+    private AudioSource audioSource;
 
     private bool triggered;
     private bool active;
 
     private Health playerHealth;
 
-    [Header("SFX")]
-    [SerializeField] private AudioClip fireSound;
+
 
     public void LightOn()
     {
@@ -34,6 +34,7 @@ public class Firetrap_loop : MonoBehaviour
     private void Awake()
     {
         light.SetActive(false);
+        audioSource=GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
         StartCoroutine(ActivateFiretrap());
@@ -68,7 +69,7 @@ public class Firetrap_loop : MonoBehaviour
         triggered = true;
         spriteRend.color = Color.red;
         yield return new WaitForSeconds(activationDelay);
-        SoundManager.instance.PlaySound(fireSound);
+        audioSource.Play();
         spriteRend.color = Color.white; 
         active = true;
         anim.SetBool("activated", true);
