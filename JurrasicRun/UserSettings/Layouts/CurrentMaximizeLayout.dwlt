@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16701
+  controlID: 244
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16702
+  controlID: 245
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 16703
+  controlID: 246
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5ca20500
-      m_LastClickedID: 369244
-      m_ExpandedIDs: 38d3f6ffd2d3f6ff9aeaf6ffccebf6ff922cf7ffbc4af7ff10fbffff466f0000ce6f00006a70000096700000de7000004471000072a0050032a20500
+      m_SelectedIDs: 5e910000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 88b8ffff94edffff10fbffff30cf0000aed0000058d1000064d10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -556,9 +556,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1164.3889, y: 362.10043, z: -1.1400151}
+    m_Target: {x: 10.107816, y: 6.808961, z: 4.585997}
     speed: 2
-    m_Value: {x: 1164.3889, y: 362.10043, z: -1.1400151}
+    m_Value: {x: 10.107816, y: 6.808961, z: 4.585997}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -609,9 +609,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 434.76492
+    m_Target: 12.42517
     speed: 2
-    m_Value: 434.76492
+    m_Value: 12.42517
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1226,22 +1226,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Fonts/TextMesh Pro/Resources/Fonts & Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Fonts/TextMesh Pro/Resources/Fonts & Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\UnityProjekty\Jurassic_Run\Jurrassic_Run\JurrasicRun
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 180}
-    m_SelectedIDs: aa880000
-    m_LastClickedID: 34986
-    m_ExpandedIDs: 00000000ea780000047900000e7900004c850000d28a0000748b0000708e000088960000d898000038a2000094a3000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 40}
+    m_SelectedIDs: 3e810000
+    m_LastClickedID: 33086
+    m_ExpandedIDs: 000000001881000038810000488100004a81000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea78000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000001881000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1294,8 +1294,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5ca20500
-    m_LastClickedInstanceID: 369244
+    m_SelectedInstanceIDs: 5e910000
+    m_LastClickedInstanceID: 37214
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000880000028800000446600004ed60000746e0000ca630000d2790000f87600005e9700005e7a00000e8d000034330000a475000074e300002a7b0000c47700000000000000830000648a00008e720000a4720000
     m_RenameOverlay:
@@ -1634,7 +1634,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -324136
+  m_LastSelectedObjectID: 369244
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1654,8 +1654,8 @@ MonoBehaviour:
     y: 0
     width: 510
     height: 957
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -1697,7 +1697,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 11
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

@@ -16,10 +16,8 @@ public class Eggs : MonoBehaviour
     public void Collected()
     {
         collectedEggs += 1;
-        Debug.Log(  collectedEggs +" / "+ AmountOfAllExisting);
+        Debug.Log(collectedEggs + " / " + AmountOfAllExisting);
     }
-
-
 
 
 }
