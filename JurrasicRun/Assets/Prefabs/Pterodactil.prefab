@@ -155,7 +155,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 5c81ae0e3e2001b4ba880bf5e5a45553, type: 3}
 --- !u!1001 &7928426378725648323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,6 +163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6990135439059633913}
     m_Modifications:
+    - target: {fileID: 1082727501482331953, guid: 9b8a70b7d02f6c449ad5d71025be44d8, type: 3}
+      propertyPath: hitsound
+      value: 
+      objectReference: {fileID: 8300000, guid: 15e8556add15e43408bed8ed859ff4d5, type: 3}
     - target: {fileID: 1082727501482331956, guid: 9b8a70b7d02f6c449ad5d71025be44d8, type: 3}
       propertyPath: m_Name
       value: egg_bomb

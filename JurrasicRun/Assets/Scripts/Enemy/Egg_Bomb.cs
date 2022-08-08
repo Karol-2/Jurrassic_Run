@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Egg_Bomb : MonoBehaviour
 {
+    [SerializeField] private AudioClip hitsound;
+    [SerializeField] protected float damage;
+
+    public bool drop = false;
 
     private SpriteRenderer sprite;
-    public bool drop = false;
-    
+    private bool onGround = false;
 
 
     private void Awake()
@@ -31,6 +34,7 @@ public class Egg_Bomb : MonoBehaviour
     {
         if(collision.CompareTag("Ground"))
         {
+            SoundManager.instance.PlaySound(hitsound);
             var parentGameObject = this.transform.parent.gameObject;
             drop = false;
             sprite.enabled = false;
@@ -38,6 +42,13 @@ public class Egg_Bomb : MonoBehaviour
             gameObject.transform.position = parentGameObject.GetComponent<Transform>().position;
             
         }
+        else if(collision.CompareTag("Player"))
+            {
+                
+                SoundManager.instance.PlaySound(hitsound);
+                collision.GetComponent<Health>().TakeDamage(damage);
+
+            }
         
     }
     

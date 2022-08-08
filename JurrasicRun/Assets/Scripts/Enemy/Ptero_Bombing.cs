@@ -45,8 +45,11 @@ public class Ptero_Bombing : MonoBehaviour
                 cooldownTimer = 0;
                 Debug.Log("Bombing");
                 if(!eggBomb.GetComponent<Egg_Bomb>().drop)
+                {
                     eggBomb.GetComponent<Egg_Bomb>().drop = true;
-                //SoundManager.instance.PlaySound(attackSound);
+                    SoundManager.instance.PlaySound(attackSound);
+                }
+                    
             }
         }
 

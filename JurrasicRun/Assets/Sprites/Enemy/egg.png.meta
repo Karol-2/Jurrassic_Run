@@ -107,9 +107,9 @@ TextureImporter:
       name: egg_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 11
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -120,6 +120,111 @@ TextureImporter:
       bones: []
       spriteID: bfecfa23734681f4faee23488e67c35f
       internalID: -1250490509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beb13b9e629ab34a9b160fafe1d4af1
+      internalID: -589203750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be7732b629a3864c9805f56c2c23a89
+      internalID: -662210329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483add2081e10b34da9482e40774fb52
+      internalID: 816810797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db616be0280b38488e83ff7149fa1c7
+      internalID: 274455255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50d88466c91b0c49989cae7e6c8e9ac
+      internalID: 6857003
       vertices: []
       indices: 
       edges: []
@@ -135,6 +240,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      egg_2: -662210329
+      egg_1: -589203750
+      egg_3: 816810797
+      egg_5: 6857003
+      egg_4: 274455255
       egg_0: -1250490509
   spritePackingTag: 
   pSDRemoveMatte: 0
