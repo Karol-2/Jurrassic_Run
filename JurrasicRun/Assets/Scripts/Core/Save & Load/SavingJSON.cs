@@ -1,4 +1,3 @@
-
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,7 +20,7 @@ public class SavingJSON : MonoBehaviour
     void Start()
     {
 
-        SetPaths();
+       // SetPaths();
     }
 
     private void CreateEmpty()
@@ -30,6 +29,7 @@ public class SavingJSON : MonoBehaviour
     }
     private void CreatePlayerData()
     {
+        
         level = SceneManager.GetActiveScene().buildIndex;
         eggs = eggsScript.collectedEggs;
         allEggs = eggsScript.AmountOfAllExisting;
@@ -39,8 +39,8 @@ public class SavingJSON : MonoBehaviour
 
     private void SetPaths()
     {
-        path = Application.dataPath + Path.AltDirectorySeparatorChar + "SaveData.json";
-        persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + "SaveData.json";
+        path = Application.dataPath + Path.AltDirectorySeparatorChar + $"SaveLevel{level}.json";
+        persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + $"SaveLevel{level}.json";
     }
 
 
@@ -59,14 +59,16 @@ public class SavingJSON : MonoBehaviour
 
     public void SaveData()
     {
+        SetPaths();
+
         string savePath = persistentPath;
+
 
         Debug.Log("Saving Data at " + savePath);
         string json = JsonUtility.ToJson(playerData);
         Debug.Log(json);
 
-        using StreamWriter writer = new StreamWriter(savePath,append: true);
-        writer.Write("\n");
+        using StreamWriter writer = new StreamWriter(savePath);
         writer.Write(json);
     }
 
