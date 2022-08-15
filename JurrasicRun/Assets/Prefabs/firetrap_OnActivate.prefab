@@ -122,8 +122,8 @@ GameObject:
   - component: {fileID: 6869713176365994466}
   - component: {fileID: 6869713176365994464}
   - component: {fileID: 6869713176365994479}
-  - component: {fileID: 6869713176365994478}
   - component: {fileID: 7682815453739420822}
+  - component: {fileID: 6869713176365994478}
   m_Layer: 0
   m_Name: firetrap_OnActivate
   m_TagString: Untagged
@@ -245,22 +245,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7332182, y: 1.5733438}
   m_EdgeRadius: 0
---- !u!114 &6869713176365994478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869713176365994467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daf66b930272cf44a907b2477291071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activationDelay: 0.7
-  activeTime: 5
-  damage: 1
-  light: {fileID: 2262120694669742413}
 --- !u!82 &7682815453739420822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -357,3 +341,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6869713176365994478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869713176365994467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daf66b930272cf44a907b2477291071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 0.7
+  activeTime: 5
+  damage: 1
+  light: {fileID: 2262120694669742413}

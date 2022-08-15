@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EggCollecting : MonoBehaviour
 {
+    [Header("Sounds")]
     [SerializeField] private AudioClip pickupSound;
     private void OnTriggerEnter2D(Collider2D collision)
     {

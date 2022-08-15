@@ -39,7 +39,7 @@ public class EnemyProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
-        base.OnTriggerEnter2D(collision); //Execute logic from parent script first
+       // base.OnTriggerEnter2D(collision); //Execute logic from parent script first
         coll.enabled = false;
 
         if (anim != null)

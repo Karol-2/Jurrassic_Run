@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PArallaxV2 : MonoBehaviour
+public class ParallaxEffect : MonoBehaviour
 {
     [SerializeField] private Vector2 parallaxEffectMultiplier;
 

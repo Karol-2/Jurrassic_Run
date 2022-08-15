@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthCollectible : MonoBehaviour
 {
+    [Header("Parameters")]
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private float healthValue;
 

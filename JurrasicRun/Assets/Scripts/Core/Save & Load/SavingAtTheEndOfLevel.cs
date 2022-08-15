@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SavingAtTheEndOfLevel : MonoBehaviour
 {
-    
+    [Header("Level Stats")]
     [SerializeField] private Eggs eggsScript;
     [SerializeField] private Bird_In_Cage bird_in_cage_script;
 
@@ -28,7 +28,6 @@ public class SavingAtTheEndOfLevel : MonoBehaviour
         SetPaths();
 
         string savePath = persistentPath;
-
 
         Debug.Log("Saving Data at " + savePath);
         string json = JsonUtility.ToJson(playerData);

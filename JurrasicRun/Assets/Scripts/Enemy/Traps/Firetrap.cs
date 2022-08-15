@@ -8,14 +8,17 @@ public class Firetrap : MonoBehaviour
     [Header("Firetrap Timers")]
     [SerializeField] private float activationDelay;
     [SerializeField] private float activeTime;
+
+    [Header("Parameters")]
     [SerializeField] private float damage;
+
+    [Header("Components")]
     [SerializeField] private GameObject light;
 
     private Animator anim;
     private SpriteRenderer spriteRend;
     private AudioSource audioSource;
     private Health playerHealth;
-
 
     private bool triggered; 
     private bool active;
@@ -57,10 +60,8 @@ public class Firetrap : MonoBehaviour
     {
         
         triggered = true;
-        //spriteRend.color = Color.red;
         yield return new WaitForSeconds(activationDelay);
         audioSource.Play();
-        //spriteRend.color = Color.white; 
         active = true;
         anim.SetBool("activated", true);
 

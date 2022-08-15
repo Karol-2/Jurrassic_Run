@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinishedLevel : MonoBehaviour
 {
+    [Header("Victory Components")]
     [SerializeField] private Finished_Panel panel;
     [SerializeField] private AudioClip victorySound;
 

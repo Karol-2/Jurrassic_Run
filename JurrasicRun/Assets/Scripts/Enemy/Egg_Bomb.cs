@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Egg_Bomb : MonoBehaviour
 {
+    [Header("Sounds")]
     [SerializeField] private AudioClip hitsound;
-    [SerializeField] protected float damage;
 
+    [Header("Parameters")]
+    [SerializeField] protected float damage;
     public bool drop = false;
 
     private SpriteRenderer sprite;
@@ -27,7 +29,6 @@ public class Egg_Bomb : MonoBehaviour
             sprite.enabled = true;
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,12 +45,8 @@ public class Egg_Bomb : MonoBehaviour
         }
         else if(collision.CompareTag("Player"))
             {
-                
                 SoundManager.instance.PlaySound(hitsound);
                 collision.GetComponent<Health>().TakeDamage(damage);
-
             }
-        
     }
-    
 }

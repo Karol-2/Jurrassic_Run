@@ -4,36 +4,28 @@ using UnityEngine.SceneManagement;
 
 public class SavingJSON : MonoBehaviour
 {
-    private PlayerData playerData;
+    [Header("Components")]
+    [SerializeField] private Eggs eggsScript;
+    [SerializeField] private Bird_In_Cage cage;
 
+    [Header("Paths")]
     private string path = "";
     private string persistentPath = "";
 
     private int level;
-    [SerializeField] private Eggs eggsScript;
-    [SerializeField] private Bird_In_Cage cage;
-
     private int eggs = -1;
     private int allEggs = 100;
     private bool dodo = false;
 
-    void Start()
-    {
+    private PlayerData playerData;
 
-       // SetPaths();
-    }
-
-    private void CreateEmpty()
-    {
-
-    }
     private void CreatePlayerData()
     {
-        
         level = SceneManager.GetActiveScene().buildIndex;
         eggs = eggsScript.collectedEggs;
         allEggs = eggsScript.AmountOfAllExisting;
         dodo = cage.birdSaved;
+
         playerData = new PlayerData(level, dodo, eggs, allEggs);
     }
 
@@ -52,7 +44,6 @@ public class SavingJSON : MonoBehaviour
             SaveData();
         }
 
-
         if (Input.GetKeyDown(KeyCode.L))
             LoadData();
     }
@@ -60,7 +51,6 @@ public class SavingJSON : MonoBehaviour
     public void SaveData()
     {
         SetPaths();
-
         string savePath = persistentPath;
 
 

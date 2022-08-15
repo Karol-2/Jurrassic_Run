@@ -9,8 +9,13 @@ public class Firetrap_loop : MonoBehaviour
     [SerializeField] private float activationDelay;
     [SerializeField] private float activeTime;
     [SerializeField] private float waitTime;
+
+    [Header("Parameters")]
     [SerializeField] private float damage;
+
+    [Header("Components")]
     [SerializeField] private GameObject light;
+
     private Animator anim;
     private SpriteRenderer spriteRend;
     private AudioSource audioSource;
@@ -19,8 +24,6 @@ public class Firetrap_loop : MonoBehaviour
     private bool active;
 
     private Health playerHealth;
-
-
 
     public void LightOn()
     {

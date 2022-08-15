@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    private float vertical;
-    private float speed = 8f;
+    [Header("Speed")]
+    [SerializeField ]private float speed = 8f;
+
     private bool isLadder;
     private bool isClimbing;
     private float initialGravity;
+    private float vertical;
 
+    [Header("Components")]
     [SerializeField] private Rigidbody2D rb;
 
     private void Awake()

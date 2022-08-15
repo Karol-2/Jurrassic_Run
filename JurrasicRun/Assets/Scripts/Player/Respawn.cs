@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class Respawn : MonoBehaviour
 {
+    [Header("Sounds")]
     [SerializeField] private AudioClip checkpointSound;
     [SerializeField] private AudioClip failureSound;
+
+    [Header("Lives")]
     public int amountOfLives = 2;
     private Transform currenCheckpoint;
     private Health playerHealth;
     private Animator playerAnim;
+
+    [Header("Death Screen")]
     [SerializeField] private Death_Screen deathScreen;
 
     private void Awake()
@@ -35,9 +40,6 @@ public class Respawn : MonoBehaviour
         transform.position = currenCheckpoint.position;
         amountOfLives -= 1;
         playerHealth.Respawn();
-
-       
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

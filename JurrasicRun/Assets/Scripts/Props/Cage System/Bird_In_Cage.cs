@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Bird_In_Cage : MonoBehaviour
 {
+    [Header("Dodo Sound System")]
     [SerializeField] private AudioClip[] dodoSounds;
     [SerializeField] private int timeOfSilence;
-    
-    public bool birdSaved = false;
-    private AudioClip currentSound;
-    public GameObject linkedCage;
-    private Rigidbody2D rb;
+
+    [Header("Components")]
     public AudioSource audioSource;
+    public GameObject linkedCage;
+
+    [Header("Stats")]
+    public bool birdSaved = false;
+
+    private AudioClip currentSound;
+    private Rigidbody2D rb;
+    
     
 
     private void Awake()
@@ -24,7 +30,6 @@ public class Bird_In_Cage : MonoBehaviour
     {
         if (linkedCage.GetComponent<SpriteRenderer>().enabled == false)
         {
-            
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.gameObject.tag = "Box";
             birdSaved = true;
@@ -33,7 +38,6 @@ public class Bird_In_Cage : MonoBehaviour
             StartCoroutine(RandomSound());
     }
 
-  
     private IEnumerator RandomSound()
     {
         if (audioSource.isPlaying)

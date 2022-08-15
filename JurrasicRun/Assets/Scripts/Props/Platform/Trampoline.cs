@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
+    [Header("Parameters")]
     [SerializeField] private AudioClip bounceSound;
     [SerializeField]private float bounce = 20f;
 

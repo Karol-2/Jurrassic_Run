@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Cage : MonoBehaviour
 {
+    [Header("Sounds")]
     [SerializeField] private AudioClip unlockSound;
+
     private SpriteRenderer sprite;
     private BoxCollider2D bc;
 

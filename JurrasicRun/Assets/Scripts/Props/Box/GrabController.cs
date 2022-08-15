@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GrabController : MonoBehaviour
 {
-   [SerializeField] private Transform grabDetect;
-   [SerializeField] private Transform boxHolder;
-   [SerializeField] private float rayDistance;
+    [Header("Check Marks")]
+    [SerializeField] private Transform grabDetect;
+    [SerializeField] private Transform boxHolder;
+    [SerializeField] private float rayDistance;
+    
+    [Header("Parameters")]
     public bool isHolding = false;
     public bool hasKey = false;
 

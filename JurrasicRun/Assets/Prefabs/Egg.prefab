@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1756677800498805049}
   - component: {fileID: 1756677800498805050}
-  - component: {fileID: 1756677800498805051}
   - component: {fileID: 1756677800498805048}
   - component: {fileID: 3580074749415186998}
+  - component: {fileID: 1756677800498805051}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Egg
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1756677800498805051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756677800498805052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d797b45a0fb67704b9606a2796b378e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupSound: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
 --- !u!61 &1756677800498805048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +133,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1756677800498805051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756677800498805052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d797b45a0fb67704b9606a2796b378e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}

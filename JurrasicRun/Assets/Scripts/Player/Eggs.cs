@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Eggs : MonoBehaviour
 {
+    [Header("Egg Stats")]
     public int collectedEggs ;
     public int AmountOfAllExisting;
     private void Start()
@@ -11,7 +12,6 @@ public class Eggs : MonoBehaviour
         collectedEggs = 0;
         AmountOfAllExisting = GameObject.FindGameObjectsWithTag("Egg").Length;
     }
-
 
     public void Collected()
     {

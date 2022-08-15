@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Death_Screen : MonoBehaviour
 {
+    [Header("Components")]
     [SerializeField] private GameObject gameoverScreen;
+
+    [Header("Sounds")]
     [SerializeField] private AudioClip gameoverSound;
 
     private void Awake()
@@ -16,7 +19,6 @@ public class Death_Screen : MonoBehaviour
     {
         gameoverScreen.SetActive(true);
         SoundManager.instance.PlaySound(gameoverSound);
-
     }
 
     public void Restart()
