@@ -45,10 +45,16 @@ public class EnemyProjectile : MonoBehaviour
         if (anim != null)
             anim.SetTrigger("explode"); //When the object is a fireball explode it
         else
-            gameObject.SetActive(false); //When this hits any object deactivate arrow
+        {
+            transform.Translate(0, 0, 0);
+            anim.SetTrigger("explode");
+            //gameObject.SetActive(false); //When this hits any object deactivate arrow
+        }
+            
     }
     private void Deactivate()
     {
+        anim.SetTrigger("backToNormal");
         gameObject.SetActive(false);
     }
 }

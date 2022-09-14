@@ -6,24 +6,23 @@ using UnityEngine.UI;
 public class Key_UI : MonoBehaviour
 {
     public GameObject player;
-    public GameObject klucz;
+    public GameObject keyGUI;
     public GameObject frame;
     private void Start()
     {
-        klucz.GetComponent<Image>().enabled = false;
+        keyGUI.GetComponent<Image>().enabled = false;
         frame.GetComponent<Image>().enabled = false;
     }
     private void Update()
     {
         if(player.GetComponent<GrabController>().hasKey == true)
         {
-            klucz.GetComponent<Image>().enabled = true;
+            keyGUI.GetComponent<Image>().enabled = true;
             frame.GetComponent<Image>().enabled = true;
-        }
-            
+        }    
         else
         {
-            klucz.GetComponent<Image>().enabled = false;
+            keyGUI.GetComponent<Image>().enabled = false;
             frame.GetComponent<Image>().enabled = false;
         }
     }
