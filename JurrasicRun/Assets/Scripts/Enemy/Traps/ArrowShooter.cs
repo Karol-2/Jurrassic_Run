@@ -8,15 +8,19 @@ public class ArrowShooter : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] arrows;
     private float cooldownTimer;
+    private AudioSource audio;
 
-    [Header("SFX")]
-    [SerializeField] private AudioClip arrowSound;
-
+    //[Header("SFX")]
+    //[SerializeField] private AudioClip arrowSound;
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     private void Attack()
     {
         cooldownTimer = 0;
 
-        SoundManager.instance.PlaySound(arrowSound);
+        audio.Play();
         arrows[FindArrow()].transform.position = firePoint.position;
         arrows[FindArrow()].GetComponent<EnemyProjectile>().ActivateProjectile();
     }

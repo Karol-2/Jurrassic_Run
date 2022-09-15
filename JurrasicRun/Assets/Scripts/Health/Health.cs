@@ -52,11 +52,12 @@ public class Health : MonoBehaviour
                     component.enabled = false;
 
                 anim.SetBool("grounded", true);
+                SoundManager.instance.PlaySound(deathSound);
                 anim.SetTrigger("die");
 
                 dead = true;
                 rb.bodyType = RigidbodyType2D.Static;
-                SoundManager.instance.PlaySound(deathSound);
+                
             }
         }
     }

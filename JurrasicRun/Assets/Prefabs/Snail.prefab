@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0072979927, y: 0.0040557384}
+  m_Offset: {x: 0.0072979927, y: 0.05446583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.89467335, y: 0.68908715}
+  m_Size: {x: 0.89467335, y: 0.78990734}
   m_EdgeRadius: 0
 --- !u!95 &6890392912034394340
 Animator:
@@ -166,8 +166,8 @@ MonoBehaviour:
   components:
   - {fileID: 6890392912034394345}
   - {fileID: 6890392912034394341}
-  deathSound: {fileID: 0}
-  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: a0f7711b3e53b264fa2ccb37e5da51b0, type: 3}
+  hurtSound: {fileID: 8300000, guid: 5d3b2c7154a22554796bbb7ce7ca54e0, type: 3}
 --- !u!114 &6890392912034394345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,4 +188,4 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: b9298cd65fe572947a78875451197ff9, type: 3}

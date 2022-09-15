@@ -20,7 +20,6 @@ public class MeleeEnemy : MonoBehaviour
     [Header("Attack Sound")]
     [SerializeField] private AudioClip attackSound;
 
-    //References
     private Animator anim;
     private Health playerHealth;
     private EnemyPatrol enemyPatrol;
@@ -36,14 +35,13 @@ public class MeleeEnemy : MonoBehaviour
        
         cooldownTimer += Time.deltaTime;
 
-        //Attack only when player in sight?
         if (PlayerInSight())
         {
             if (cooldownTimer >= attackCooldown && playerHealth.currentHealth > 0)
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("meleeAttack");
-                //SoundManager.instance.PlaySound(attackSound);
+                SoundManager.instance.PlaySound(attackSound);
             }
         }
 

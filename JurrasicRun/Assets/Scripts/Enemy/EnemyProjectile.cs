@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
+    [Header("Arrow Specifications")]
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
+
+    [Header("DIRECTIONS")]
+    [SerializeField] private bool Left;
+    [SerializeField] private bool Up;
+
     private float lifetime;
     private Animator anim;
     private BoxCollider2D coll;
-
     private bool hit;
 
     private void Awake()
@@ -27,13 +32,27 @@ public class EnemyProjectile : MonoBehaviour
     }
     private void Update()
     {
-        if (hit) return;
-        float movementSpeed = speed * Time.deltaTime;
-        transform.Translate(movementSpeed, 0, 0);
+        if(Left)
+        {
+            if (hit) return;
+            float movementSpeed = speed * Time.deltaTime;
+            transform.Translate(movementSpeed, 0, 0);
 
-        lifetime += Time.deltaTime;
-        if (lifetime > resetTime)
-            gameObject.SetActive(false);
+            lifetime += Time.deltaTime;
+            if (lifetime > resetTime)
+                gameObject.SetActive(false);
+        }
+        if (Up)
+        {
+            if (hit) return;
+            float movementSpeed = speed * Time.deltaTime;
+            transform.Translate(0, movementSpeed, 0);
+
+            lifetime += Time.deltaTime;
+            if (lifetime > resetTime)
+                gameObject.SetActive(false);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
