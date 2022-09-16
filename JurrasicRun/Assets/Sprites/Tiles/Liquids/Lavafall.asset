@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Lavafall
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -782280318, guid: dfa9701e17812ae48b92843ec673c97f, type: 3}
+  - {fileID: 993334447, guid: dfa9701e17812ae48b92843ec673c97f, type: 3}
+  - {fileID: 97014420, guid: dfa9701e17812ae48b92843ec673c97f, type: 3}
+  - {fileID: -1630687628, guid: dfa9701e17812ae48b92843ec673c97f, type: 3}
+  - {fileID: -640184814, guid: dfa9701e17812ae48b92843ec673c97f, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 6
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 1
+  m_TileColliderType: 1
