@@ -12,6 +12,7 @@ TagManager:
   - Ladder
   - OneWayPlatform
   - Egg
+  - Lever
   layers:
   - Default
   - TransparentFX
