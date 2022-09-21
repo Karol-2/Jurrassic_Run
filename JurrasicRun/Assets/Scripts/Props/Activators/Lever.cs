@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
+    [SerializeField] private GameObject magic;
     public bool activated = false;
     private bool touching = false;
     private Animator animator;
+    private GameObject ps;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        ps = GameObject.Find("Glitter");
+        ps.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
 
-    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -35,6 +36,7 @@ public class Lever : MonoBehaviour
             activated = !activated;
 
             Debug.Log(activated);
+            ps.SetActive(true);
         }
     }
 }
