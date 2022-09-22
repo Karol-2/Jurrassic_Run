@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b72d95d093b839442b057b443b07ca8b
+guid: 257884e1fbfdb1946b29bc79c4fbc3e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snake_0
+      name: Snake_Die_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48367fc3d5ec163469bf0be93cf2d02e
-      internalID: 1955781796
+      spriteID: 2eb43cd5a046fa346bda5c9abc1fae64
+      internalID: -1930822267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_1
+      name: Snake_Die_1
       rect:
         serializedVersion: 2
         x: 64
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5773fa612e1fd7343b2cab624331323a
-      internalID: -1827966912
+      spriteID: 662e1f08392c5824094a7b9ce0a258e4
+      internalID: -381492869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_2
+      name: Snake_Die_2
       rect:
         serializedVersion: 2
         x: 128
@@ -160,8 +160,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f90d899e7c7ba40a00525b1279019a
-      internalID: -913531095
+      spriteID: f6940e03edd494245921878f423ec312
+      internalID: 1211005304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Die_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553265a5f771c744f895f9b100baf553
+      internalID: 1932047877
       vertices: []
       indices: 
       edges: []
@@ -177,9 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snake_0: 1955781796
-      Snake_1: -1827966912
-      Snake_2: -913531095
+      Snake_Die_1: -381492869
+      Snake_Die_2: 1211005304
+      Snake_Die_3: 1932047877
+      Snake_Die_0: -1930822267
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

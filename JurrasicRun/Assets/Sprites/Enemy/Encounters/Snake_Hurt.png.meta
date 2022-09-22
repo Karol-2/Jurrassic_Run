@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b72d95d093b839442b057b443b07ca8b
+guid: b7abac9966ec9254fb612105e492e265
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snake_0
+      name: Snake_Hurt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48367fc3d5ec163469bf0be93cf2d02e
-      internalID: 1955781796
+      spriteID: afb69ecb371ecc846b52da096a058828
+      internalID: 1714172057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_1
+      name: Snake_Hurt_1
       rect:
         serializedVersion: 2
         x: 64
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5773fa612e1fd7343b2cab624331323a
-      internalID: -1827966912
+      spriteID: eb0c9acaf960e694bb1c51ce1511c4d5
+      internalID: -1324749801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snake_2
+      name: Snake_Hurt_2
       rect:
         serializedVersion: 2
         x: 128
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f90d899e7c7ba40a00525b1279019a
-      internalID: -913531095
+      spriteID: 77d26611beb1fdb45b7e33548b90c6c5
+      internalID: 637376873
       vertices: []
       indices: 
       edges: []
@@ -177,9 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snake_0: 1955781796
-      Snake_1: -1827966912
-      Snake_2: -913531095
+      Snake_Hurt_2: 637376873
+      Snake_Hurt_0: 1714172057
+      Snake_Hurt_1: -1324749801
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

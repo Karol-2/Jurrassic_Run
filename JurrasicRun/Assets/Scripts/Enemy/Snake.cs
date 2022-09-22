@@ -9,12 +9,12 @@ public class Snake : MonoBehaviour
     private Transform target;
     public bool isActivated = false;
     private Vector2 moveDirection;
-    private bool health;
+    private bool dead;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        health = GetComponent<Health>().dead;
+        dead = GetComponent<Health>().dead;
     }
 
     private void Start()
@@ -38,7 +38,7 @@ public class Snake : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(target && isActivated && !health)
+        if(target && isActivated && !dead)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * speed;
             //rb.velocity = new Vector2(moveDirection.x * speed,1) ;
