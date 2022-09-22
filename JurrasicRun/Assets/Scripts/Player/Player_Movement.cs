@@ -160,7 +160,8 @@ public class Player_Movement : MonoBehaviour
 
     public bool canAttack()
     {
-        return horizontal == 0 && isGrounded()&& !pause.GamePaused;
+        //return horizontal == 0 && isGrounded()&& !pause.GamePaused;
+        return horizontal == 0 &&!pause.GamePaused;
     }
 
     private IEnumerator JumpCooldown()

@@ -24,10 +24,13 @@ public class Lever : MonoBehaviour
         {
             touching = true;
         }
-        else
-            touching = false;
-        
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        touching = false;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)&& touching)
