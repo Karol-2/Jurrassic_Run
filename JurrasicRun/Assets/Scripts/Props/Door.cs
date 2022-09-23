@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
     private void Update()
     {
         opened = activator.GetComponent<Lever>().activated;
-        Debug.Log(opened);
+        //Debug.Log(opened);
         if (opened)
             animator.SetBool("opened", true);
     }

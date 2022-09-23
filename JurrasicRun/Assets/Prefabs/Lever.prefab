@@ -4974,8 +4974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 4554901426638085086}
-  endOfPathInstruction: 1
-  speed: 10
+  endOfPathInstruction: 2
+  speed: 7
 --- !u!1 &4554901426488585867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,9 +5067,9 @@ MonoBehaviour:
       - {x: 13.637122, y: 1.7266668, z: 0}
       - {x: 13.930969, y: 1.8735904, z: 0}
       - {x: 14.218238, y: 2.0172246, z: 0}
-      - {x: 14.301709, y: 2.172513, z: 0}
-      - {x: 14.38518, y: 2.3278017, z: 0}
-      - {x: 14.597529, y: 2.7228515, z: 0}
+      - {x: 14.307681, y: 2.1987329, z: 0}
+      - {x: 14.391152, y: 2.3540215, z: 0}
+      - {x: 14.603501, y: 2.7490714, z: 0}
       - {x: 14.397381, y: 2.9638753, z: 0}
       - {x: 14.197231, y: 3.2048993, z: 0}
       - {x: 13.882198, y: 3.584268, z: 0}
@@ -5105,7 +5105,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1

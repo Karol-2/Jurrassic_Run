@@ -10,7 +10,7 @@ public class Firetrap : MonoBehaviour
     [SerializeField] private float activeTime;
 
     [Header("Parameters")]
-    [SerializeField] private float damage;
+    public float damage;
 
     [Header("Components")]
     [SerializeField] private GameObject light;
