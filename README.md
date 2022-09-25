@@ -6,15 +6,19 @@ Do not confuse with a marvelous 93’ movie “Jurassic Park”
 <br>
 
 # What’s going on?
-<p align="center">
 ![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png)
-</p>
 It’s my first ever unity game that I fully developed by myself. *The first game is just like the first pancake* - it’s probably not the best one, I am aware of that.
-<br>
 This game is a platformer Mario-like. You play as an azure dinosaur called Azoo, who travels the prehistoric world to help free oppressed dodo birds.
-<p align="center">
 ![hearts.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/hearts.png)
-</p>
+
+# Gallery
+
+---
+
+| ![scr1.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%201.png) | ![scr2.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%202.png) | ![scr3.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%203.png) |
+| --- | --- | --- |
+| ![scr4.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%204.png) | ![scr5.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%205.png) | ![scr6.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%206.png) |
+
 # Collectibles
 
 ---
@@ -82,7 +86,7 @@ This game is a platformer Mario-like. You play as an azure dinosaur called Azoo,
 
 **The “Winter” Set**
 
-lv l1 theme spruce forest - pendulum blades
+lvl 1 theme spruce forest - pendulum blades
 
 lvl 2 theme night - falling snow, ice
 
@@ -142,11 +146,15 @@ lvl 3 - boss fight
 
 “Retro” ([https://opengameart.org/content/retro-monster-roar](https://opengameart.org/content/retro-monster-roar)) by greg300 CC-0
 
-“Mutant Frog” ([https://opengameart.org/content/mutant-frog](https://opengameart.org/content/mutant-frog))
-
- by AntumDeluge CC-0
+“Mutant Frog” ([https://opengameart.org/content/mutant-frog](https://opengameart.org/content/mutant-frog)) by AntumDeluge CC-0
 
 “Forest Whisper Theme” by Cleyton Kauffman - [https://soundcloud.com/cleytonkauffman](https://soundcloud.com/cleytonkauffman), Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+“Cold Athmospheric Music” ([https://opengameart.org/content/cold-atmospheric-music](https://opengameart.org/content/cold-atmospheric-music))by linxiaoma CC-BY 4.0
+
+“Scrapes: ([https://opengameart.org/content/scrapes](https://opengameart.org/content/scrapes)) by AntumDeluge CC-0
+
+“Monster 1” ([https://opengameart.org/content/monster-1](https://opengameart.org/content/monster-1)) by Bart Kelsey
 
 # A note from the creator
 
