@@ -6,16 +6,15 @@ Do not confuse with a marvelous 93’ movie “Jurassic Park”
 <br>
 
 # What’s going on?
-
+<p align="center">
 ![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png)
-
-It’s my first ever unity game that I fully developed by myself. *The first game is just like the first 
-pancake* - it’s propably not the best one, I am aware of that. 
-
-This game is a platformer mario-alike. You play as an azure dinosaur called Azoo, who travels the prehistoric world to help freeing oppressed dodo birds.
-
+</p>
+It’s my first ever unity game that I fully developed by myself. *The first game is just like the first pancake* - it’s probably not the best one, I am aware of that.
+<br>
+This game is a platformer Mario-like. You play as an azure dinosaur called Azoo, who travels the prehistoric world to help free oppressed dodo birds.
+<p align="center">
 ![hearts.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/hearts.png)
-
+</p>
 # Collectibles
 
 ---
@@ -41,7 +40,7 @@ This game is a platformer mario-alike. You play as an azure dinosaur called Azoo
 | Snail | ![snail.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/snail.png) | Melee attack |
 | Ptero | ![ptero.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/ptero.png) | Drops egg-bombs |
 | Flying eel | ![eel.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/eel.png) | Follows player and bites |
-| Netoperek | TO BE DONE | Unabling attack in the nearby area |
+| Netoperek | TO BE DONE | Preventing attacks in the nearby area |
 | Slime | TO BE DONE | Jumping, slowing down |
 
 # KeyList
@@ -73,7 +72,7 @@ This game is a platformer mario-alike. You play as an azure dinosaur called Azoo
 
 | lvl Number | Theme | New features | Finished? |
 | --- | --- | --- | --- |
-| 1 | Yellow & Blue | eels, lever mechanics, trampolines | ❌ |
+| 1 | Yellow & Blue | eels, lever mechanics, trampolines | ✅ |
 | 2 | Red & Blue | falling stones, breaking platforms, target shooting, slime | ❌ |
 | 3 | Green & Red | activation plate, netoperek | ❌ |
 
@@ -151,5 +150,5 @@ lvl 3 - boss fight
 
 # A note from the creator
 
-> Hi! Thanks for looking out here. This is my first gamdev project. I spend countless hours working on it. I know it propably has many bugs or stuff that doesnt work 100% as it should. Please be understaing. I hope you’ll like my game 😊
+>Hi! Thanks for looking out here. This is my first gamdev project. I spend countless hours working on it. I know it probably has many bugs or stuff that doesn't work 100% as it should. Please be understanding. I hope you’ll like my game 😊
 >
