@@ -14,7 +14,7 @@ public class FireOnLever : MonoBehaviour
     private void Update()
     {
         opened = activator.GetComponent<Lever>().activated;
-        Debug.Log("fire stopped");
+        //Debug.Log("fire stopped");
         if (opened)
         {
             animator.SetBool("activated", true);

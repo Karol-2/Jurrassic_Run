@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 33006
+  controlID: 21542
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 305
-    y: 73
+    x: 306
+    y: 19
     width: 1242
     height: 482
   m_ViewDataDictionary: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 1
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 33007
+  controlID: 21543
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 33008
+  controlID: 21544
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 34030
+  controlID: 21545
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,24 +249,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c860000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1423f9ff2023f9ff8c67fbffdabefcff6617fdffd818fdfff8d2feff5298ffff56a3ffffa4a4ffff7aa5ffffbac7ffff84d4ffff04faffff267000002a80000080810000
+      scrollPos: {x: 0, y: 144}
+      m_SelectedIDs: 54e5ffff
+      m_LastClickedID: -6828
+      m_ExpandedIDs: 60eaffff06fbffff268200003685000048850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Doors
+        m_OriginalName: Doors
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -6248
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -300,10 +300,10 @@ MonoBehaviour:
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 9}
-  - {fileID: 2}
   - {fileID: 10}
-  m_Selected: 1
-  m_LastSelected: 2
+  - {fileID: 2}
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -570,7 +570,7 @@ MonoBehaviour:
       index: 10
       layout: 4
   m_WindowGUID: 65e5ad92db3a8d145abc1c1cc7920050
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -579,9 +579,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 205.11584, y: -27.16215, z: -1.0681565}
+    m_Target: {x: 141.83267, y: -12.472543, z: 0.056014642}
     speed: 2
-    m_Value: {x: 205.6667, y: -28.149899, z: -1.046502}
+    m_Value: {x: 141.83267, y: -12.472543, z: 0.056014642}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -632,9 +632,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 50.286587
+    m_Target: 28.553867
     speed: 2
-    m_Value: 48.121136
+    m_Value: 28.553867
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -687,7 +687,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 3
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -729,22 +729,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Props
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Props
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\UnityProjekty\Jurassic_Run\Jurrassic_Run\JurrasicRun
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: 3c7b0000
-    m_LastClickedID: 31548
-    m_ExpandedIDs: 00000000247b0000267b0000287b00002a7b0000307b0000387b0000427b0000487b0000509d000000ca9a3bffffff7f
+    m_SelectedIDs: 28810000
+    m_LastClickedID: 33064
+    m_ExpandedIDs: 00000000f0800000f2800000f4800000f68000001281000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -772,7 +772,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000247b0000267b0000287b00002a7b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000f0800000f2800000f4800000f680000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -797,8 +797,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2c860000
-    m_LastClickedInstanceID: 34348
+    m_SelectedInstanceIDs: 54e5ffff
+    m_LastClickedInstanceID: -6828
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000880000028800000446600004ed60000746e0000ca630000d2790000f87600005e9700005e7a00000e8d000034330000a475000074e300002a7b0000c47700000000000000830000648a00008e720000a4720000d482000014820000f48600003e340100d01b0100
     m_RenameOverlay:
@@ -816,7 +816,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -850,7 +850,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 576
-    width: 1512
+    width: 1548
     height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1256,7 +1256,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -449760
+  m_LastSelectedObjectID: -6828
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52

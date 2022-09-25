@@ -7,12 +7,14 @@ public class Snake : MonoBehaviour
     [SerializeField] private float speed = 1f;
     private Rigidbody2D rb;
     private Transform target;
+    private AudioSource audioSource;
     public bool isActivated = false;
     private Vector2 moveDirection;
     private bool dead;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         dead = GetComponent<Health>().dead;
     }

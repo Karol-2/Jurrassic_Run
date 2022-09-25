@@ -9,11 +9,13 @@ public class Lever : MonoBehaviour
     private bool touching = false;
     private Animator animator;
     private GameObject ps;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         ps = GameObject.Find("Glitter");
+        audioSource = gameObject.GetComponent<AudioSource>();
         ps.SetActive(false);
     }
 
@@ -38,7 +40,9 @@ public class Lever : MonoBehaviour
             animator.SetTrigger("change");
             activated = !activated;
 
-            Debug.Log(activated);
+            audioSource.Play();
+            
+            //Debug.Log(activated);
             ps.SetActive(true);
         }
     }
