@@ -13,6 +13,7 @@ TagManager:
   - OneWayPlatform
   - Egg
   - Lever
+  - Projectile
   layers:
   - Default
   - TransparentFX

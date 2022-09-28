@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
+    [Header("Activator object")]
     [SerializeField] private GameObject activator;
+
+    [Header("Type of activator (ONLY ONE)")]
+    [SerializeField] private bool lever;
+    [SerializeField] private bool target;
+    [SerializeField] private bool plate;
+
     private Animator animator;
     private AudioSource audioSource;
+
     private bool opened;
     private bool soundPlayed = false;
     private void Awake()
@@ -17,7 +24,13 @@ public class Door : MonoBehaviour
     }
     private void Update()
     {
-        opened = activator.GetComponent<Lever>().activated;
+        if (lever)
+            opened = activator.GetComponent<Lever>().activated;
+        else if (target)
+            opened = activator.GetComponent<Target_Activator>().activated;
+        else if (plate)
+            Debug.Log("plate");
+
         //Debug.Log(opened);
         if (opened&& !soundPlayed)
         {

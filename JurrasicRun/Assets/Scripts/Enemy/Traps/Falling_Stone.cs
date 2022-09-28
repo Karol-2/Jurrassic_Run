@@ -11,27 +11,34 @@ public class Falling_Stone : MonoBehaviour
     private BoxCollider2D bc;
     private Rigidbody2D rb;
     private AudioSource audioSource;
-    private SpriteRenderer sprite;
+    private Transform transform;
     private Coroutine coroutine;
+
     private bool destroyed = false;
     private bool falling = false;
+    private Vector2 startingPosition;
 
     private void Awake()
     {
         bc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        transform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
-        sprite = GetComponent<SpriteRenderer>();
+        startingPosition = new Vector2 (transform.position.x, transform.position.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //when it hits the ground
         if(collision.CompareTag("Ground"))
         {
-            //gameObject.transform = new Vector3(0,0,0);
+            StopAllCoroutines();
+            //Debug.Log("hit the ground");
             rb.bodyType = RigidbodyType2D.Static;
-            sprite.enabled = false;
+            transform.position = startingPosition;
             falling = false;
+            audioSource.enabled = true;
+
 
         }
     }
@@ -57,6 +64,7 @@ public class Falling_Stone : MonoBehaviour
         var emissing = particles.emission;
         emissing.rateOverTime = 10;
         yield return new WaitForSeconds(timeStageII);
+        //falling
         audioSource.enabled = false;
         rb.bodyType = RigidbodyType2D.Dynamic;
         falling = true;
