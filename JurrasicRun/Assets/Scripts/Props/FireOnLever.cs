@@ -6,10 +6,12 @@ public class FireOnLever : MonoBehaviour
 {
     [SerializeField] private GameObject activator;
     private Animator animator;
+    private Coroutine coroutine;
     private bool opened;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        
     }
     private void Update()
     {

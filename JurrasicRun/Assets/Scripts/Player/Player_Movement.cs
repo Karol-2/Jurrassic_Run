@@ -31,8 +31,6 @@ public class Player_Movement : MonoBehaviour
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
     public Pause_Menu pause;
-    //[SerializeField] private Transform groundCheck;
-    //[SerializeField] private LayerMask wallLayer;
 
 
     [Header("Dust particles")]

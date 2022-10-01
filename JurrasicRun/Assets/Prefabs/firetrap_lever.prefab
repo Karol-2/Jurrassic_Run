@@ -123,8 +123,9 @@ GameObject:
   - component: {fileID: 5279570018954377974}
   - component: {fileID: 5279570018954377977}
   - component: {fileID: 8974553354412451712}
-  - component: {fileID: 5279570018954377976}
   - component: {fileID: 8974553354412451713}
+  - component: {fileID: 7090931220189000651}
+  - component: {fileID: 7805468270311505465}
   m_Layer: 0
   m_Name: firetrap_lever
   m_TagString: Untagged
@@ -342,22 +343,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5279570018954377976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5279570018954377973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daf66b930272cf44a907b2477291071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activationDelay: 0.7
-  activeTime: 5
-  damage: 1
-  light: {fileID: 681865986207906395}
 --- !u!114 &8974553354412451713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,3 +356,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activator: {fileID: 0}
+--- !u!114 &7090931220189000651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279570018954377973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a667af2785fe264aada8ca5c0a3dad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
+--- !u!114 &7805468270311505465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279570018954377973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daf66b930272cf44a907b2477291071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 0
+  activeTime: 0
+  damage: 0
+  light: {fileID: 681865986207906395}
