@@ -1,4 +1,4 @@
-# Jurassic Jump!
+# Jurassic Run!
 
 Do not confuse with a marvelous 93’ movie “Jurassic Park”
 

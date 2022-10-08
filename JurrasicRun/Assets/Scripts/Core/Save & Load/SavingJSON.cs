@@ -9,7 +9,6 @@ public class SavingJSON : MonoBehaviour
     [SerializeField] private Bird_In_Cage cage;
 
     [Header("Paths")]
-    private string path = "";
     private string persistentPath = "";
 
     private int level;
@@ -31,7 +30,7 @@ public class SavingJSON : MonoBehaviour
 
     private void SetPaths()
     {
-        path = Application.dataPath + Path.AltDirectorySeparatorChar + $"SaveLevel{level}.json";
+        //path = Application.dataPath + Path.AltDirectorySeparatorChar + $"SaveLevel{level}.json";
         persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + $"SaveLevel{level}.json";
     }
 

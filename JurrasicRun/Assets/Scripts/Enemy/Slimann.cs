@@ -95,7 +95,7 @@ public class Slimann : MonoBehaviour
 
     private bool isGrounded()
     {
-        float extraHeightText = 0.25f;
+        float extraHeightText = 0.5f;
         RaycastHit2D raycastHit = Physics2D.Raycast(bc.bounds.center, Vector2.down,
             bc.bounds.extents.y + extraHeightText, groundLayer);
         Color rayColor;
