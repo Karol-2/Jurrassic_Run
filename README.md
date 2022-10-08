@@ -1,23 +1,22 @@
 # Jurassic Run!
 
 Do not confuse with a marvelous 93’ movie “Jurassic Park”
-
-<br>
 <br>
 
 # What’s going on?
-![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png)
+![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png) <br>
 It’s my first ever unity game that I fully developed by myself. *The first game is just like the first pancake* - it’s probably not the best one, I am aware of that.
 This game is a platformer Mario-like. You play as an azure dinosaur called Azoo, who travels the prehistoric world to help free oppressed dodo birds.
+<br>
 ![hearts.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/hearts.png)
 
 # Gallery
 
 ---
 
-| ![scr1.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%201.png) | ![scr2.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%202.png) | ![scr3.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%203.png) |
+| ![scr1.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%201.jpg) | ![scr2.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%202.jpg) | ![scr3.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%203.jpg) |
 | --- | --- | --- |
-| ![scr4.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%204.png) | ![scr5.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%205.png) | ![scr6.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%206.png) |
+| ![scr4.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%204.jpg) | ![scr5.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%205.jpg) | ![scr6.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/Screen%206.jpg) |
 
 # Collectibles
 
@@ -41,11 +40,11 @@ This game is a platformer Mario-like. You play as an azure dinosaur called Azoo,
 
 | Name | Image | Powers |
 | --- | --- | --- |
-| Snail | ![snail.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/snail.png) | Melee attack |
-| Ptero | ![ptero.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/ptero.png) | Drops egg-bombs |
-| Flying eel | ![eel.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/eel.png) | Follows player and bites |
+| Snail | ![snail.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/snail.jpg) | Melee attack |
+| Ptero | ![ptero.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/ptero.jpg) | Drops egg-bombs |
+| Flying eel | ![eel.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/eel.jpg) | Follows player and bites |
 | Netoperek | TO BE DONE | Preventing attacks in the nearby area |
-| Slime | TO BE DONE | Jumping, slowing down |
+| Slime | ![slimann.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/slimann.jpg) | Jumping, Being annoying |
 
 # KeyList
 
@@ -155,6 +154,8 @@ lvl 3 - boss fight
 “Scrapes: ([https://opengameart.org/content/scrapes](https://opengameart.org/content/scrapes)) by AntumDeluge CC-0
 
 “Monster 1” ([https://opengameart.org/content/monster-1](https://opengameart.org/content/monster-1)) by Bart Kelsey
+
+“Breaking Rock” (https://opengameart.org/content/breaking-rock) by thmightyglider CC-0
 
 # A note from the creator
 
