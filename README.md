@@ -77,7 +77,7 @@ This game is a platformer Mario-like. You play as an azure dinosaur called Azoo,
 | lvl Number | Theme | New features | Finished? |
 | --- | --- | --- | --- |
 | 1 | Yellow & Blue | eels, lever mechanics, trampolines | ✅ |
-| 2 | Red & Blue | falling stones, breaking platforms, target shooting, slime | ❌ |
+| 2 | Red & Blue | falling stones, breaking platforms, target shooting, slime | ✅ |
 | 3 | Green & Red | activation plate, netoperek | ❌ |
 
 ---
