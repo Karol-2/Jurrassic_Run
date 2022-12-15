@@ -29,7 +29,7 @@ public class Door : MonoBehaviour
         else if (target)
             opened = activator.GetComponent<Target_Activator>().activated;
         else if (plate)
-            Debug.Log("plate");
+            opened = activator.GetComponent<Plate>().activated;
 
         //Debug.Log(opened);
         if (opened&& !soundPlayed)
