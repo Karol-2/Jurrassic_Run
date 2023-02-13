@@ -32,7 +32,7 @@ public class Death_Screen : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+    // UnityEditor.EditorApplication.isPlaying = false;
     }
 
 }
