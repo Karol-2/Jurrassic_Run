@@ -70,8 +70,8 @@ public class Player_Movement : MonoBehaviour
 
 
         //Reseting Scene
-        if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       // if (Input.GetKeyDown(KeyCode.R))
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
 
         horizontal = Input.GetAxisRaw("Horizontal");
