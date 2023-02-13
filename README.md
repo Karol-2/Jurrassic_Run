@@ -1,10 +1,6 @@
 # Jurassic Run!
 
-You can play it [HERE](https://26karol261.itch.io/jurrasic-run) 
-
-<iframe frameborder="0" src="https://itch.io/embed/1704587" width="552" height="167"><a href="https://26karol261.itch.io/jurrasic-run">Jurrasic Run by 26karol261</a></iframe>
-
-<br>
+You can play it [HERE](https://26karol261.itch.io/jurrasic-run) <br>
 
 # What’s going on?
 ![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png) <br>
