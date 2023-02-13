@@ -3,11 +3,13 @@
 You can play it [HERE](https://26karol261.itch.io/jurrasic-run) <br>
 
 # What’s going on?
-![frame.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png) <br>
-It’s my first ever unity game that I fully developed by myself. *The first game is just like the first pancake* - it’s probably not the best one, I am aware of that.
+<p align="center"> <img src="https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/frame.png" alt="frame.png"> </p>
+It’s my first ever unity game that I fully developed by myself. <i> The first game is just like the first pancake </i>- it’s probably not the best one, I am aware of that.
 This game is a platformer Mario-like. You play as an azure dinosaur called Azoo, who travels the prehistoric world to help free oppressed dodo birds.
 <br>
-![hearts.png](https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/hearts.png)
+<p align="center">
+ <img src="https://github.com/Karol-2/Jurrassic_Run/blob/main/Readme_content/hearts.png" alt="hearts.png"> 
+</p>
 
 # Gallery
 
